@@ -6,6 +6,8 @@ from views.products import products_app
 app = Flask(__name__)
 app.register_blueprint(products_app, url_prefix="/products")
 
+app.config.update(SERVER_NAME="flask_app")
+
 
 @app.route("/")
 def root():
