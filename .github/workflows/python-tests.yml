@@ -38,6 +38,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy via some webhook
-        run: curl -X POST https://httpbin.org/post \
-          -H "x-workflow-name:$GITHUB_WORKFLOW" \
-          -H "x-commit-sha:$GITHUB_SHA"
+        run: curl -X POST https://httpbin.org/post -H "x-workflow-name:$GITHUB_WORKFLOW" -H "x-commit-sha:$GITHUB_SHA"
